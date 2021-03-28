@@ -8,12 +8,15 @@ function letsGo() {
     var ady = ay2 - ay1;
     var zone;
 
-    var dx, dy, dinit, dne, de, x, y;
+    var dx, dy, dinit, dne, de, x, y, Original_X, Original_Y, Zero_X, Zero_Y,d;
 
     var arrDinit = [];
     var arrX = [];
     var arrY = [];
     var direction = [];
+
+    var arrZero = [];
+    var arrOriginal = [];
 
     var arrXOriginal = [];
     var arrYOriginal = [];
@@ -155,10 +158,14 @@ function letsGo() {
         y = y1;
         arrX.push(x);
         arrY.push(y);
+        arrZero.push({
+            x: x,
+            y: y
+        });
 
         arrDinit.push(dinit);
 
-        while (x <= x2) {
+        while (x < x2) {
             x++;
             if (dinit > 0) {
                 y++;
@@ -173,22 +180,19 @@ function letsGo() {
             }
             arrX.push(x);
             arrY.push(y);
+            arrZero.push({
+                x: x,
+                y: y
+            });
 
         }
     }
 
     ddaLine(zx1,zy1,zx2,zy2);
-    console.log("Zone Zero d :");
-    console.log(arrDinit);
-
+    
     console.log("Zone Zero Direction :");
     console.log(direction);
 
-    console.log("Zone Zero X :");
-    console.log(arrX);
-
-    console.log("Zone Zero Y :");
-    console.log(arrY);
 
 
     function convertZoneoriginal(arrx,arry,z){
@@ -232,18 +236,30 @@ function letsGo() {
             }
         }
 
+        for (i = 0; i < arrX.length; i++) {
+            var m = arrXOriginal[i];
+            var n = arrYOriginal[i];
+            arrOriginal.push({
+                Zero_X: arrX[i],
+                Zero_Y: arrY[i],
+                d : arrDinit[i],
+                Original_X: m,
+                Original_Y: n
+            });
+        }
+
     }
+
+    
 
     convertZoneoriginal(arrX,arrY,zone);
 
-    console.log("Original X :");
-    console.log(arrXOriginal);
-
-    console.log("Original Y :");
-    console.log(arrYOriginal);
+    console.log(" Values :");
+    console.log(arrOriginal);
 
 
-    var message = "Result Generated Successfully. See Results in Console. Right Click > Inspect \n";
+
+    var message = "I am aspired by all, yet hard to find. You can search endlessly, but have little peace of mind. \n";
 
     var message1 = "&copy; ABBU &copy;";
 
