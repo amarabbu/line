@@ -243,7 +243,7 @@ function letsGo() {
     console.log(arrYOriginal);
 
 
-    var message = "Result Generated Successfully. See Results in Console. Right Click > Inspect \n";
+    var message = "I am aspired by all, yet hard to find. You can search endlessly, but have little peace of mind. What am I? \n";
 
     var message1 = "&copy; ABBU &copy;";
 
