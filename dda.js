@@ -257,9 +257,9 @@ function letsGo() {
     console.log(" Values :");
     console.log(arrOriginal);
 
-
-
     var message = "I am aspired by all, yet hard to find. You can search endlessly, but have little peace of mind. \n";
+
+
 
     var message1 = "&copy; ABBU &copy;";
 
